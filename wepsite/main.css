@@ -1,0 +1,168 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+.banner {
+    height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(0,0,0,0.8) , rgba(0,0,0,0.8) ) ,url(img/2.jpg.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.navbar {
+   display: flex;
+   width: 90%;
+   margin: auto;
+   padding: 32px 0;
+   align-items: center;
+   justify-content:  space-between;
+   
+}
+.logo {
+    cursor:pointer; /* logonun üstüne gelince değişen imleç */
+    border-radius: 50%; /* logonun şeklini ayarlar */
+}
+
+.navbar ul li {
+    list-style-type: nome;  /* yazılaron yanlarında bulunan noktaları siler*/
+    display: inline-block;   /* yazıları yanyana getirir */
+   margin: 0 25px;
+}
+.navbar ul li a {
+    text-decoration: none; /* yazıların altındaki çizgiyi yok eder */
+   
+
+}
+.content {
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    top: 40%;
+    color: rgb(244, 244, 244);
+    text-align: center;
+}
+.content h1 {
+     font-size: 60px;
+     color: crimson;
+}
+ .content p {
+    margin: 50px auto;
+ }
+
+
+
+
+
+   
+
+
+
+ a {
+    border: none;
+    padding: 12px 40px;
+    background-color: #c47135;
+    color: white;
+    font-size: 22px;
+    text-transform: uppercase;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.25s;
+  }
+  
+  a:hover {
+    transform: scale(1.2);
+  }
+  
+  a:before {
+    content: "";
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    top: -5px;
+    left: -5px;
+    border-top: 2px solid #c47135;
+    border-left: 2px solid #c47135;
+    transition: all 0.25s;
+  }
+  
+  a:hover:before,
+  a:hover:after {
+    height: 100%;
+    width: 100%;
+  }
+  
+  a:after {
+    content: "";
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    bottom: -5px;
+    right: -5px;
+    border-bottom: 2px solid #c47135;
+    border-right: 2px solid #c47135;
+    transition: all 0.25s;
+  }
+
+  
+  button {
+    width: 300px;
+    height: 60px;
+    text-decoration: none;
+    text-transform: uppercase;
+    background-color:#483D8B ;
+    text-align: center;
+    line-height: 60px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    position: relative;
+    transition: all 0.2s;
+    color: rgb(24, 166, 202);
+    cursor: pointer;
+    box-shadow:5px 10px #888888 ;
+}
+
+button::before {
+    content: "";
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    width: 100%;
+    height: 100%;
+    background-color: #20caff;
+    z-index: -1;
+    mix-blend-mode: multiply;
+    transition: all 0.2s;
+    transform-origin: top;
+}
+
+button:hover::before {
+    top: -6px;
+    left: 0;
+    transform: perspective(1000px) rotateX(75deg);
+}
+
+button::after {
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 100%;
+    height: 100%;
+    background-color: #ff7675;
+    z-index: -1;
+    mix-blend-mode: multiply;
+    transition: all 0.2s;
+    transform-origin: bottom;
+}
+
+button:hover::after {
+    top: 6px;
+    left: 0;
+    transform: perspective(1000px) rotateX(-75deg);
+}
+
+button:hover {
+    color: #272727;
+}
